@@ -1,5 +1,36 @@
 # learnjava
 
+how does bytecode gets generated?
+java compiler converts .java file to .class or bytecode
+
+what are components of jvm and explain?
+jvm consists of five main components 
+1. class loader sub system.
+a. There are three types.
+1. Loading.
+Classloader is classified into three types
+1. Bootstrap classloader.
+2. Extension classloader.
+3. Application classloader.
+2. Linking.
+1. Prepare.
+2. Verify.
+3. Initialize.
+3. Initialization.
+2. Run time data area or memory area.
+1. Method area.
+2. heap area
+3. Stack area.
+4. PC register.
+5. Native method.
+3. Execution engine.
+1. Interpreter.
+Executes bytecode instructions line by line
+2. Just in time compiler.(jit)
+
+3. Garbage collector.
+4. Native method area.
+5. Native method interface.
 1. what is a class?
 - A class is a blueprint or template which holds variables and methods. A class variable or method can be accessed only using object instantiation, and memory for non-static (instance) variables is allocated only when an object is created during execution. Static variables belong to the class itself and are allocated memory when the class is loaded by the JVM. A class can also have constructors to initialize object state, and access modifiers like private, protected, and public control visibility. Methods of a class are stored in the method area and frequently used methods are compiled into native code by the JIT compiler for faster execution. Garbage collector removes memory of objects when they are no longer referenced, while static members remain until JVM shuts down.
 2. what is an object?
