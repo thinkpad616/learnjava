@@ -6,9 +6,7 @@ java compiler converts .java file to .class or bytecode
 what are components of jvm and explain?
 jvm consists of five main components 
 1. class loader sub system.
-a. There are three types.
-1. Loading.
-Classloader is classified into three types
+1. Loading: Classloader is classified into three types
 1. Bootstrap classloader.
 2. Extension classloader.
 3. Application classloader.
