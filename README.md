@@ -349,7 +349,62 @@ Interface in Java comes under the reference type classification, just like a cla
 It’s part of Java’s type system, used to define contracts that classes can implement.
 JVM treats it similarly to a class file — it’s loaded, verified, and stored in the runtime method area — but it contains only method signatures, not implementations.
 
+🔹 1️⃣ Can an interface instance be created in Java?
+
+❌ No, we cannot create an object (instance) of an interface.
+
+Because:
+	•	An interface doesn’t have method implementations, only method declarations (abstract methods).
+	•	There’s nothing to execute, so the JVM cannot create an object from it.
+
+✅ However — we can create an object of a class that implements an interface and reference it by the interface type.
+
+Example:
+interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+
+Animal a = new Dog();  // ✅ allowed — Dog object, Animal reference
+a.sound();              // Bark
+🔹 2️⃣ Can an interface have a constructor?
+
+❌ No, interfaces cannot have constructors.
+
+Reason:
+	•	A constructor’s job is to initialize an object, but since you can’t create an interface object, there’s no use for a constructor.
+	•	Interfaces don’t have instance variables to initialize, so constructors make no sense here.
+
+⸻
+
+🔹 3️⃣ Can an interface have variables?
+
+✅ Yes, interfaces can have variables — but with strict rules:
+
+All variables in an interface are public, static, and final by default — even if you don’t write it.
+
+That means:
+	•	They are constants (cannot be changed),
+	•	Shared by all implementing classes,
+	•	Accessed using the interface name, not through an object.
+interface MathConstants {
+    double PI = 3.14159;  // implicitly public static final
+}
+
+class Circle implements MathConstants {
+    void area(double r) {
+        System.out.println("Area: " + (PI * r * r));
+    }
+}
+
 ---------
+
+
 ➤ Core Java (OOPs, Collections, Concurrency)
 1.	Difference between HashMap, LinkedHashMap, and ConcurrentHashMap.
 2.	Explain Java ClassLoader hierarchy and how custom ClassLoaders work.
