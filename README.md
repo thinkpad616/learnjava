@@ -404,6 +404,8 @@ class Circle implements MathConstants {
 
 ---------
 
+What is public static void main(String[] args) in Java?
+
 
 ➤ Core Java (OOPs, Collections, Concurrency)
 1.	Difference between HashMap, LinkedHashMap, and ConcurrentHashMap.
