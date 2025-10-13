@@ -120,7 +120,135 @@ public class Test {
 what are abstract methods in java?
 - abstract methods does not have any implementation. 
 
-what is an exception in java?
+what is an exception in java? its hierarchy ?
+At the top of all errors and exceptions is the Throwable class in java.lang package.
+Throwable has two main subclasses:
+java.lang.Object
+   ↳ java.lang.Throwable
+         ↳ java.lang.Exception
+         ↳ java.lang.Error
+•	Error → serious problems (like OutOfMemoryError, StackOverflowError). Not meant to be handled by code.
+	•	Exception → conditions that programs might want to handle.
+
+Under Exception, we have two categories:
+	1.	Checked Exceptions (Compile-time exceptions)
+	2.	Unchecked Exceptions (Runtime exceptions)
+
+2️⃣ Checked Exceptions (Compile-time exceptions)
+	•	Checked exceptions are checked by the compiler during compilation.
+	•	You must handle them using try-catch or declare using throws.
+	•	Occur due to external conditions (like file not found, database not reachable, etc.).
+	•	Examples:
+	•	IOException
+	•	SQLException
+	•	ClassNotFoundException
+	•	FileNotFoundException
+try {
+    FileReader fr = new FileReader("abc.txt");
+} catch (IOException e) {
+    System.out.println(e);
+}
+If you don’t handle or declare a checked exception, the program won’t compile.
+
+3️⃣ Unchecked Exceptions (Runtime exceptions)
+	•	Unchecked exceptions are not checked by the compiler.
+	•	Occur during program execution due to programming mistakes.
+	•	These exceptions extend RuntimeException.
+	•	Examples:
+	•	ArithmeticException
+	•	NullPointerException
+	•	ArrayIndexOutOfBoundsException
+	•	NumberFormatException
+
+int a = 10 / 0;  // ArithmeticException
+String s = null;
+System.out.println(s.length());  // NullPointerException
+
+You don’t have to handle runtime exceptions — it’s optional, but recommended.
+
+5️⃣ try, catch, and finally
+
+try block
+	•	Code that might cause an exception is placed inside a try block.
+	•	Must be followed by either catch or finally.
+
+catch block
+	•	Used to handle the exception thrown from the try block.
+	•	Can have multiple catch blocks for different exception types.
+
+try {
+    int a = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+}
+
+finally block
+	•	Always executed whether exception occurs or not.
+	•	Used for cleanup code like closing files, database connections, etc.
+	•	Executes even if return statement is present inside try or catch.
+
+try {
+    int a = 5 / 0;
+} catch (Exception e) {
+    System.out.println("Handled: " + e);
+} finally {
+    System.out.println("Finally block always executes");
+}
+
+🧩 1️⃣ throw keyword
+
+Definition:
+
+throw is used inside a method to actually throw an exception object manually.
+
+It’s like saying:
+
+“Hey Java, I want to stop execution here and signal that something went wrong!”
+throw new ExceptionType("Error message");
+
+Important Points about throw:
+	1.	We can throw only one exception at a time.
+	2.	The object thrown using throw must be of type Throwable or its subclass (like Exception or Error).
+	3.	When we throw a checked exception, the method must either handle it with try-catch or declare it using throws.
+	4.	It is used within the method body, not in the method declaration.
+
+
+🧩 2️⃣ throws keyword
+
+Definition:
+
+throws is used in the method declaration to indicate that the method might throw an exception.
+
+It tells the caller of the method:
+
+“I may throw this exception — you should handle it.”
+
+returnType methodName() throws ExceptionType1, ExceptionType2
+
+import java.io.*;
+
+public class ThrowsExample {
+    // Declaring that this method may throw IOException
+    void readFile() throws IOException {
+        FileReader fr = new FileReader("abc.txt");
+    }
+
+    public static void main(String[] args) {
+        ThrowsExample obj = new ThrowsExample();
+        try {
+            obj.readFile();
+        } catch (IOException e) {
+            System.out.println("File not found: " + e.getMessage());
+        }
+    }
+}
+
+Important Points about throws:
+	1.	throws is used in the method signature (declaration).
+	2.	It is used to declare checked exceptions only.
+	3.	It allows the caller of the method to decide how to handle the exception.
+	4.	You can declare multiple exceptions separated by commas.
+
 
 ➤ Core Java (OOPs, Collections, Concurrency)
 1.	Difference between HashMap, LinkedHashMap, and ConcurrentHashMap.
