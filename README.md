@@ -320,6 +320,36 @@ Important Points about throws:
 	4.	You can declare multiple exceptions separated by commas.
 
 
+--------
+
+🔹 Where does Interface fit in Java classification?
+
+In Java, everything starts with the OOP (Object-Oriented Programming) structure — and Interface is part of the Type System under the Class and Object model.
+
+You can think of it like this:
+Java Language
+ ├── Data Types
+ │     ├── Primitive types (int, char, boolean, etc.)
+ │     └── Reference types
+ │           ├── Class
+ │           ├── Interface
+ │           ├── Enum
+ │           └── Array
+🔹 So technically:
+
+An interface is a reference type, just like a class, enum, or array —
+but it’s used to define abstract behavior (a contract) rather than storing data or providing direct implementation.
+🔹 In JVM terms:
+	•	Interfaces are loaded by the Class Loader Subsystem just like classes.
+	•	They live in the Method Area (Runtime Data Area).
+	•	When a class implements an interface, the method table (vtable) in JVM connects the class’s method implementation to the interface method reference.
+🧠 Simple human explanation:
+
+Interface in Java comes under the reference type classification, just like a class.
+It’s part of Java’s type system, used to define contracts that classes can implement.
+JVM treats it similarly to a class file — it’s loaded, verified, and stored in the runtime method area — but it contains only method signatures, not implementations.
+
+---------
 ➤ Core Java (OOPs, Collections, Concurrency)
 1.	Difference between HashMap, LinkedHashMap, and ConcurrentHashMap.
 2.	Explain Java ClassLoader hierarchy and how custom ClassLoaders work.
