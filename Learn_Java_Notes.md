@@ -62,7 +62,31 @@ The parent class of all classes in Java is the **Object** class, defined in the 
 You can call one constructor from another using `this()`. It must be the first statement in the constructor.
 
 ---
+## Inheritance in Java
 
+Definition:
+Inheritance in Java enables a class to inherit properties and actions from another class, called a superclass (parent class).
+A class derived from a superclass is called a subclass (child class).
+
+⸻
+
+Terms Used in Inheritance
+	•	Class:
+A class is a group of objects that have common properties. It acts as a blueprint or template from which objects are created.
+	•	Subclass / Child Class:
+A subclass is a class that inherits another class.
+It is also known as a derived class, extended class, or child class.
+	•	Superclass / Parent Class:
+The superclass is the class from which the subclass inherits features.
+It is also called a base class or parent class.
+	•	Reusability:
+Reusability allows using the fields and methods of an existing class in a new class.
+This helps avoid code duplication and promotes cleaner, modular design.
+---
+## Polymorphism
+- The word ‘polymorphism’ means ‘having many forms’. Polymorphism are Two Types:
+    1.Method OverLoading
+    2.Method Overriding  
 ## Overriding vs Overloading
 
 ### Overriding
@@ -236,6 +260,32 @@ class Dog implements Animal {
         3.if-else-if ladder
         4.Nested if-statement
 
+---
+## Array Defination
+    Arrays are fundamental structures in Java that allow us to store multiple values of the same type in a single variable.
+    1.In Java, all arrays are dynamically allocated.
+    2.Arrays may be stored in contiguous memory.
+    3.Since arrays are objects in Java, we can find their length using the object property length. This is different from C/C++, where we find length using size of.
+    4.A Java array variable can also be declared like other variables with [] after the data type.
+    5.It is the simplest data structure where each data element can be accessed directly by only using its index number.
+    6.The variables in the array are ordered, and each has an index beginning with 0.
+---
+## Types of Methods
+    In Java, methods can be categorized in two main ways:
+    1. Predefined vs. User-defined:
+        Predefined methods: These methods are already defined in the Java Class Library and can be used directly without any declaration.
+            Examples include System.out.println() for printing to the console and Math.max() for finding the maximum of two numbers.
+        User-defined methods: These are methods that you write yourself to perform specific tasks within your program. 
+```java
+Syntax:
+    returnType methodName() {
+    // method body
+    }
+
+    returnType - It specifies what type of value a method returns.
+    methodName - It is an identifier that is used to refer to the particular method in a program.
+    method body - It includes the programming statements that are used to perform some tasks.body is enclosed inside the curly braces { }.
+```
 ---
 # Advanced Java Topics
 
