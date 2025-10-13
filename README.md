@@ -95,6 +95,74 @@ default is accessable within the package
 explain abstract class in java?
 - abstract class in java contains abstract methods along with implimentation methods with concrete logic.
 - it can be used with extends keyword as a abstract class cannot be instantiated.
+- Abstract classes can define fields (variables) and constructors, allowing for shared state and initialization logic among subclasses
+
+💡 Why do we need abstract classes when Java already has inheritance and interfaces?
+
+Even though inheritance and interfaces look similar to what abstract classes can do, abstract classes fill the gap between them — they sit in between full abstraction (interface) and full implementation (concrete class).
+
+⸻
+
+🔹 1. When you need partial implementation
+	•	An interface only defines method signatures (before Java 8) — no implementation.
+	•	But sometimes, you want to define some methods (common for all subclasses) and leave others abstract.
+→ That’s exactly what an abstract class is for.
+abstract class Vehicle {
+    abstract void start(); // subclass will define
+
+    void stop() {          // common method for all vehicles
+        System.out.println("Vehicle stopped");
+    }
+}
+Here, Vehicle provides partial implementation — something that interfaces can’t fully do.
+
+🔹 2. When you want to share common state (variables)
+	•	An interface cannot hold instance variables (only constants — public static final).
+	•	But an abstract class can hold instance variables shared by all subclasses.
+abstract class Employee {
+    String name;
+    int id;
+    abstract double calculateSalary();
+}
+→ You can store data like name and id — interfaces can’t.
+
+🔹 3. When you need constructors or initialization
+	•	Abstract classes can have constructors — interfaces can’t.
+	•	That allows you to initialize common variables when subclasses are created.
+abstract class Shape {
+    String color;
+    Shape(String color) {
+        this.color = color;
+    }
+}
+🔹 4. When you expect closely related classes
+	•	If you know classes are closely related and share a base behavior, use an abstract class.
+	•	If classes are unrelated but just share a contract, use an interface.
+
+🧠 Example:
+	•	Car, Bike, Truck → all are vehicles → abstract class Vehicle
+	•	Comparable, Serializable → unrelated behaviors → interfaces
+🔹 5. Multiple inheritance problem
+	•	Java doesn’t allow multiple inheritance with classes (to avoid ambiguity).
+	•	But you can extend one abstract class and implement multiple interfaces together
+abstract class Animal {
+    abstract void eat();
+}
+
+interface Pet {
+    void play();
+}
+
+class Dog extends Animal implements Pet {
+    void eat() { System.out.println("Dog eats"); }
+    public void play() { System.out.println("Dog plays"); }
+}
+
+We use abstract classes when we want to share common code or state among related classes, but still want to leave some methods for subclasses to implement.
+Interfaces just define contracts without implementation, while inheritance gives full behavior reuse.
+An abstract class sits in between — it allows partial implementation, shared variables, and even constructors.
+So, when classes are closely related and share common behavior, we prefer an abstract class instead of only using interfaces.
+
 
 abstract class Vehicle {
     abstract void start();  // abstract method
@@ -116,6 +184,8 @@ public class Test {
         v.stop();
     }
 }
+
+why abstract class when interface exists?
 
 what are abstract methods in java?
 - abstract methods does not have any implementation. 
