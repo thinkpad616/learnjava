@@ -33,6 +33,20 @@ Executes bytecode instructions line by line
 - A class is a blueprint or template which holds variables and methods. A class variable or method can be accessed only using object instantiation, and memory for non-static (instance) variables is allocated only when an object is created during execution. Static variables belong to the class itself and are allocated memory when the class is loaded by the JVM. A class can also have constructors to initialize object state, and access modifiers like private, protected, and public control visibility. Methods of a class are stored in the method area and frequently used methods are compiled into native code by the JIT compiler for faster execution. Garbage collector removes memory of objects when they are no longer referenced, while static members remain until JVM shuts down.
 2. what is an object?
  - Object is a instance of a class, to access any member of a class.
+
+what is parent class in java.lang package?
+The parent class of all classes in Java is the Object class, which is defined in the java.lang package.
+	•	Object is declared as a public class, so it’s accessible to all other classes.
+	•	Every class in Java implicitly extends Object, even if you don’t write extends Object in your code.
+	•	This means every class automatically inherits methods from the Object class — such as:
+	•	toString()
+	•	equals(Object obj)
+	•	hashCode()
+	•	getClass()
+	•	clone()
+	•	finalize()
+	•	wait(), notify(), notifyAll()
+- 
 3. Why can a class not be defined as protected?
  - class can be either public or package private only
  - https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
