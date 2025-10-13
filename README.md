@@ -46,11 +46,81 @@ The parent class of all classes in Java is the Object class, which is defined in
 	•	clone()
 	•	finalize()
 	•	wait(), notify(), notifyAll()
-- 
+
+How to call one constructor from the other constructor ?
+- using this() we can call other constructor in same class and it should be the first line of constructor. we can pass values as per other constructor initialization.
+
+overriding vs overloading ?
+overriding:
+- overriding happens in inheritance where method from parent class is overriden in subclass
+- overriding is based on runtime polymorphism (dynamic binding)
+- we use @override keyword when impimenting
+- we cannot reduce accessmodifer from parent class
+- child class cannot throw broader checked exception from parent class. 
+overloading:
+- overloading is compile time polymorphism
+- overloading happens in same class we can use same methodname with differt return types and input values.
+- ovverloading doesnt have any barriers with exceptions or access modifier. 
+
+what is super keyword in java?
+- super key word can be used while a subclass extends parent class to reference variables in constructor which should be first line in constructor. and we can also use super key word to call method from parent class in child class.
+
+is a relationship vs has a relationship in java?
+is a relation ship is inheritance where child class extends parent class. 
+has a relationship is like using object in another class. like car object (instance of class) is created in engine class and engine uses its methods. 
+
+Explain about instanceof operator in java?
+- instanceof is used to check weather an obeject is an instance of class.class Animal { }
+class Dog extends Animal { }
+
+Animal a = new Dog();
+System.out.println(a instanceof Animal);  // true
+System.out.println(a instanceof Dog);     // true
+System.out.println(a instanceof Object);  // true
+System.out.println(a instanceof String);  // false
+Animal b = null;
+System.out.println(b instanceof Animal);  // false
+
+
 3. Why can a class not be defined as protected?
  - class can be either public or package private only
  - https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
 
+Explain what access modifiers can be used for variables?
+private is accessable witin the class 
+public is accessable anywhere
+protected is accessable witin the same package. 
+default is accessable within the package
+
+explain abstract class in java?
+- abstract class in java contains abstract methods along with implimentation methods with concrete logic.
+- it can be used with extends keyword as a abstract class cannot be instantiated.
+
+abstract class Vehicle {
+    abstract void start();  // abstract method
+    void stop() {           // concrete method
+        System.out.println("Vehicle stopped");
+    }
+}
+
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car starts with a key");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Vehicle v = new Car();  // reference of abstract class
+        v.start();
+        v.stop();
+    }
+}
+
+what are abstract methods in java?
+- abstract methods does not have any implementation. 
+
+what is an exception in java?
 
 ➤ Core Java (OOPs, Collections, Concurrency)
 1.	Difference between HashMap, LinkedHashMap, and ConcurrentHashMap.
