@@ -215,7 +215,28 @@ class Dog implements Animal {
 - **String[] args:** command-line arguments
 
 ---
+## Java Control Statements | Control Flow in Java
+    Java provides three types of control flow statements.
+        1.Decision Making statements
+            1.Simple if statement
+            2.if-else statement
+            3.if-else-if ladder
+            4.Nested if-statement
+        2.switch statement
+        3.Loop statements
+            1.do while loop
+            2.while loop
+            3.for loop
+        .Jump statements
+            1.break statement
+            2.continue statement
+## Conditional Statements
+        1.Simple if statement
+        2.if-else statement
+        3.if-else-if ladder
+        4.Nested if-statement
 
+---
 # Advanced Java Topics
 
 ## Core Java (OOPs, Collections, Concurrency)
