@@ -1,5 +1,8 @@
 # Learn Java
 
+## Why is the Java platform independent? 
+Because Java code is compiled into bytecode, and this bytecode is executed in the Java Virtual Machine (JVM).
+
 ## How does bytecode get generated?
 Java compiler converts `.java` file to `.class` or bytecode.
 
@@ -70,18 +73,15 @@ A class derived from a superclass is called a subclass (child class).
 
 ⸻
 
-Terms Used in Inheritance
-	•	Class:
-A class is a group of objects that have common properties. It acts as a blueprint or template from which objects are created.
-	•	Subclass / Child Class:
-A subclass is a class that inherits another class.
-It is also known as a derived class, extended class, or child class.
-	•	Superclass / Parent Class:
-The superclass is the class from which the subclass inherits features.
-It is also called a base class or parent class.
-	•	Reusability:
-Reusability allows using the fields and methods of an existing class in a new class.
-This helps avoid code duplication and promotes cleaner, modular design.
+## Terms Used in Inheritance
+
+A class is a group of objects that share common properties. It serves as a blueprint or template for creating objects.
+
+A subclass, also known as a derived class, extended class, or child class, inherits features from another class.
+
+The superclass, also called a base class or parent class, is the class from which the subclass inherits its features.
+
+Reusability allows the use of the fields and methods of an existing class in a new class. This practice helps avoid code duplication and promotes cleaner, modular design.
 ---
 ## Polymorphism
 - The word ‘polymorphism’ means ‘having many forms’. Polymorphism are Two Types:
