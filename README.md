@@ -107,3 +107,6 @@ ___
 - [JVM 101: Garbage Collection and Heap (Part 2)](https://medium.com/javarevisited/jvm-101-garbage-collection-and-heap-part-2-dc36b710638d)
 - [Java Virtual Machine (JVM) Internals, Part 1 — Classloader](https://medium.com/javarevisited/java-virtual-machine-internals-class-loader-eea706eb37d9)
 - [Java Virtual Machine (JVM) Internals, Part 2 — Class file format](https://medium.com/javarevisited/java-virtual-machine-jvm-internals-part-2-class-file-format-7752e5f7dbbe)
+
+
+![jvm](https://github.com/user-attachments/assets/4b09fec1-f7ef-4421-bcff-b2abbf43bc1b)
