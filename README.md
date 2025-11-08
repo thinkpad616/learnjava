@@ -110,3 +110,4 @@ ___
 
 
 ![jvm](https://github.com/user-attachments/assets/4b09fec1-f7ef-4421-bcff-b2abbf43bc1b)
+![jvm_old_yound_gen](https://github.com/user-attachments/assets/4ef2982d-22e2-4e88-a196-16a946e82937)
