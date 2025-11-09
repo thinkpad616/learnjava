@@ -112,3 +112,4 @@ ___
 ![jvm](https://github.com/user-attachments/assets/4b09fec1-f7ef-4421-bcff-b2abbf43bc1b)
 ![jvm_old_yound_gen](https://github.com/user-attachments/assets/4ef2982d-22e2-4e88-a196-16a946e82937)
 <img width="633" height="311" alt="Screenshot 2025-11-08 at 5 16 51 PM" src="https://github.com/user-attachments/assets/7c5ccdc4-3b9e-4928-a695-cf74ec5e1878" />
+![stack vs heap](https://github.com/user-attachments/assets/7e5ba157-26c8-4df4-9014-6087ae7e5dc9)
