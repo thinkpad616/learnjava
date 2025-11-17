@@ -1,6 +1,3 @@
-Java Backend and Microservices Interview Handbook
-This is a comprehensive extraction of all questions, discussion topics, and listed lines from the provided images, grouped by their original source sections to facilitate manual validation.
-I. Java Backend Developer (3-6 Years) — Must-Prepare Interview Questions 
 Core Java & OOPs (Deep-Dive Questions) 
 1. Explain OOP principles with real-world examples .
 2. Abstraction vs encapsulation (real-world example) .
@@ -45,8 +42,6 @@ Coding / Problem-Solving (EPAM Favorites)
 9. Calculate totals by user ID using Streams .
 10. Implement API rate limiting in Java .
 --------------------------------------------------------------------------------
-II. Microservices Developer position at HCL Tech - Interview Discussion Topics 
-Project Development 
 • Explained a feature I developed — covering API design, database structure, and code optimization .
 • Discussed approaches for improving performance and scalability in microservice environments .
 Hibernate Caching 
@@ -69,7 +64,6 @@ ORM & Hibernate Performance
 Security 
 • Discussed the difference between Authentication and Authorization in application design and how they are implemented in Spring Security .
 --------------------------------------------------------------------------------
-III. 10 Hard Java Streams Questions (with Answers) 
 1. What's the main difference between Collections and Streams? (Collections store data; Streams process data through a pipeline of operations.) .
 2. What's the difference between intermediate and terminal operations? (Intermediate operations (like map, filter) are lazy; terminal ones (like collect, forEach) trigger execution.) .
 3. How does lazy evaluation improve performance in Streams? (Operations are executed only when needed, reducing unnecessary computation.) .
@@ -81,7 +75,6 @@ III. 10 Hard Java Streams Questions (with Answers)
 9. How does short-circuiting work in Streams? (Operations like findFirst() or anyMatch() stop processing once a condition is satisfied.) .
 10. Why are streams not reusable? (Once consumed by a terminal operation, a stream pipeline closes and cannot be reused.) .Closing Question: What's your favorite Stream trick or collector? Share it below .
 --------------------------------------------------------------------------------
-IV. Microservices Resilience Patterns & Caching concepts in Spring Boot 
 Microservices Resilience Patterns (Resilience4j) 
 1. What is a Circuit Breaker? Why do we need it? .
 2. Explain states of Circuit Breaker (Closed, Open & Half-Open) .
@@ -109,7 +102,6 @@ Config Server & API Gateway
 3. Dynamic refresh — how @RefreshScope works? .
 4. Why do we use an API Gateway in Microservices Architecture? .
 --------------------------------------------------------------------------------
-V. Structured Interview Prep (Multiple Sections) 
 Spring Boot Core 
 1. Explain Spring Boot Auto-configuration? How does it work internally, and how do you customize it using @ConditionalOnProperty or @autoconfigureBefore? .
 2. Difference between @Component, @Service, @Repository — Are they functionally different or just semantic? .
@@ -130,7 +122,6 @@ JPA / Hibernate / Database
 2. Difference between lazy and eager loading — When does LazyInitializationException occur? .
 3. Explain optimistic vs pessimistic locking — @Version annotation and use cases .
 --------------------------------------------------------------------------------
-VI. Java + Spring Boot + Microservices (Deloitte Interview) 
 Microservices & Architecture 
 1. Why do we prefer Microservices over Monolithic? .
 2. What is Saga Design Pattern? Types (Choreography vs Orchestration)? Where have you used it? .
@@ -165,8 +156,6 @@ Coding Round
 1. Write infix to postfix string conversation? .
 2. Write sql to find 5th maximum salary in a student table .
 --------------------------------------------------------------------------------
-VII. Backend Developer roles (Framework Internals & Deep Design Concepts) 
-Spring / Spring Boot (Framework Internals & Design) 
 1. What is the Spring IoC container and how does it manage dependencies? .
 2. Difference between @Component, @Repository, and @Service .
 3. What is Spring Boot Auto-Configuration, and how can you disable it? .
